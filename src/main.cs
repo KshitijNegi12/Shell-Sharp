@@ -1,7 +1,8 @@
 using System.Net;
 using System.Net.Sockets;
 
-Console.Write("$ ");
-
-var command = Console.ReadLine();
-Console.Write($"{command}: command not found");
+while(true){
+    Console.Write("$ ");
+    var command = Console.ReadLine();
+    Console.Write($"{command}: command not found");
+}
