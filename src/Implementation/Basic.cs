@@ -10,7 +10,7 @@ namespace ShellSharp.src.Implementation
         {
             _validCmds = new List<string>()
             {
-                "echo", "exit"
+                "echo", "exit", "type"
             };
         }
 
