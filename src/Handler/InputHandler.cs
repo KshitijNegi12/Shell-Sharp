@@ -14,16 +14,21 @@ namespace ShellSharp.src.Handler
             var parts = input.Split(' ');
             if (parts.Length > 0)
             {
-                switch (parts[0])
+                var cmd = parts[0];
+                var args = parts[1..];
+                switch (cmd)
                 {
                     case "exit":
-                        return Basic.HandleExit(parts);
+                        return Basic.HandleExit(args);
 
                     case "echo":
-                        return Basic.HandleEcho(parts);
+                        return Basic.HandleEcho(args);
+
+                    case "type":
+                        return Basic.HandleType(args);
 
                     default:
-                        return Basic.HandleDefault(parts);
+                        return Basic.HandleDefault(cmd, args);
 
                 }
             }
